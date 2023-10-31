@@ -1,0 +1,29 @@
+Desenho do Data Warehouse - Parte 03 - 04 Dim Funcionário
+
+Para execução das ações descritas nestas transparências, precisamos acessar os arquivos contidos nos itens:
+
+1. Arquivo da Transformação - D_Funcionário DS
+
+2. Arquivo da Transformação - D_Funcionário DW
+
+3. Arquivo de Transformação - Funcionário DS UPDATE ID_CHEFE
+
+Softwares usados para realização desta atividade:
+
+·         O SGBD Postgres
+
+·         Pentaho Data Integration
+
+Ações a serem realizadas:
+
+1. Executar a transformação contida em: Arquivo da Transformação - D_Funcionário DS
+
+2. Submeter a log da transformação na tarefa: Transf 07-1 - Funcionário DS
+
+3. Executar a transformação contida em: Arquivo da Transformação - D_Funcionário DW
+
+4. Submeter a log da transformação na tarefa: Transf 07-2 - Funcionário DW
+
+5. Executar a transformação contida em: Arquivo de Transformação - Funcionário DS UPDATE ID_CHEFE
+
+6. Submeter a log da transformação na tarefa: Transf 07-3 - Funcionário DW UPDATE ID_CHEFE

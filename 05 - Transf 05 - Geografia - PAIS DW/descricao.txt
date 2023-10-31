@@ -1,0 +1,23 @@
+Desenho do Data Warehouse - Parte 03 - 03 Dim Geografia
+
+Para execução das ações descritas nestas transparências, precisamos acessar os arquivos contidos nos itens:
+
+1. Arquivo da Transformação - Geografia - PAIS DS
+
+2. Arquivo da Transformação - Geografia - PAIS DW
+
+Softwares usados para realização desta atividade:
+
+·         O SGBD Postgres
+
+·         Pentaho Data Integration
+
+Ações a serem realizadas:
+
+1. Executar a transformação contida em: Arquivo da Transformação - Geografia - PAIS DS
+
+2. Submeter a log da transformação na tarefa: Transf 05 - Geografia - PAIS DS
+
+3. Executar a transformação contida em: Arquivo da Transformação - Geografia - PAIS DW
+
+4. Submeter a log da transformação na tarefa: Transf 05 - Geografia - PAIS DW

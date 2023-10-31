@@ -1,0 +1,23 @@
+Desenho do Data Warehouse - Parte 03 - 06 Fato Venda
+
+Para execução das ações descritas nestas transparências, precisamos acessar os arquivos contidos nos itens:
+
+1. Arquivo de Transformação - Fatos Vendas DS
+
+2. Arquivo de Transformação - Fatos Vendas DW
+
+Softwares usados para realização desta atividade:
+
+·         O SGBD Postgres
+
+·         Pentaho Data Integration
+
+Ações a serem realizadas:
+
+1. Executar a transformação contida em: Arquivo de Transformação - Produto DS.
+
+2. Submeter a log da transformação na tarefa: Transf 08 - Fatos Vendas DS Tarefa
+
+3. Executar a transformação contida em: Arquivo de Transformação - Produto DW
+
+4. Submeter a log da transformação na tarefa: Transf 08 - Fatos Vendas DW Tarefa 
