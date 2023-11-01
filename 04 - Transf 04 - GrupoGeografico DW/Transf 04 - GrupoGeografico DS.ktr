@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Transf 05 - Geografia - PAIS DS</name>
+    <name>Transf 04 - Geografia DS</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,9 +427,9 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/06/22 10:33:39.257</created_date>
+    <created_date>2018/06/18 16:51:59.897</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/06/22 10:33:39.257</modified_date>
+    <modified_date>2018/06/18 16:51:59.897</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -440,61 +440,10 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>DS</database>
+    <database>ds</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>5432</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>DW</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>Native</access>
-    <database>DW</database>
-    <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <password>Encrypted 2be98afc86aa79f85a010a57fca9dbdd3</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -539,8 +488,8 @@
   </connection>
   <order>
     <hop>
-      <from>Add constants</from>
-      <to>If field value is null</to>
+      <from>Table input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -554,18 +503,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
-      <to>Database lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>Table output</to>
+      <from>Add constants</from>
+      <to>If field value is null</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -580,7 +519,7 @@
     </hop>
     <hop>
       <from>Unique rows</from>
-      <to>Select values 2</to>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -618,55 +557,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>DW</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>D_GrupoGeografico</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>GrupoGeografico</name>
-        <field>Nome</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>Id_GrupoGeo</name>
-        <rename>Id_GrupoGeo</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>224</xloc>
+      <xloc>432</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
@@ -697,7 +588,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
+      <xloc>288</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
@@ -722,14 +613,8 @@
       </valuetypes>
     <fields>
       <field>
-        <name>Pais</name>
-        <value>ZZ</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>Id_GrupoGeo</name>
-        <value>1</value>
+        <name>GrupoGeografico</name>
+        <value>Não Aplica</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
       </field>
@@ -768,79 +653,65 @@
     <fields>
       <select_unspecified>N</select_unspecified>
       <remove>
-        <name>NrNf</name>
+        <name>nrnf</name>
       </remove>
       <remove>
-        <name>DataVenda</name>
+        <name>datavenda</name>
       </remove>
       <remove>
-        <name>CodCliente</name>
+        <name>codcliente</name>
       </remove>
       <remove>
-        <name>NomeCliente</name>
+        <name>nomecliente</name>
       </remove>
       <remove>
-        <name>EmailCliente</name>
+        <name>emailcliente</name>
       </remove>
       <remove>
-        <name>RegiaoVendas</name>
+        <name>regiaovendas</name>
       </remove>
       <remove>
-        <name>VendedorLogin</name>
+        <name>pais</name>
       </remove>
       <remove>
-        <name>VendedorNome</name>
+        <name>vendedorlogin</name>
       </remove>
       <remove>
-        <name>VendedorChefeNome</name>
+        <name>vendedornome</name>
       </remove>
       <remove>
-        <name>Cod_Produto</name>
+        <name>vendedorchefenome</name>
       </remove>
       <remove>
-        <name>Produto</name>
+        <name>cod_produto</name>
       </remove>
       <remove>
-        <name>Tamanho</name>
+        <name>produto</name>
       </remove>
       <remove>
-        <name>Linha</name>
+        <name>tamanho</name>
       </remove>
       <remove>
-        <name>Cor</name>
+        <name>linha</name>
       </remove>
       <remove>
-        <name>SubTotal</name>
+        <name>cor</name>
       </remove>
       <remove>
-        <name>ImpTotal</name>
+        <name>subtotal</name>
       </remove>
       <remove>
-        <name>Frete</name>
+        <name>imptotal</name>
       </remove>
       <remove>
-        <name>PrecoUnitario</name>
+        <name>frete</name>
       </remove>
       <remove>
-        <name>Qtd</name>
+        <name>precounitario</name>
       </remove>
-      <meta>
-        <name>Pais</name>
-        <rename>Pais</rename>
-        <type>None</type>
-        <length>50</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
+      <remove>
+        <name>qtd</name>
+      </remove>
       <meta>
         <name>GrupoGeografico</name>
         <rename>GrupoGeografico</rename>
@@ -858,23 +729,6 @@
         <currency_symbol/>
         <storage_type/>
       </meta>
-      <meta>
-        <name>Id_GrupoGeo</name>
-        <rename>Id_GrupoGeo</rename>
-        <type>None</type>
-        <length>9</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -885,107 +739,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>160</xloc>
       <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>GrupoGeografico</name>
-      </remove>
-      <meta>
-        <name>Pais</name>
-        <rename>Sigla</rename>
-        <type>None</type>
-        <length>50</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>Id_GrupoGeo</name>
-        <rename>Id_GrupoGeo</rename>
-        <type>None</type>
-        <length>9</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LinData</name>
-        <rename>LinData</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LinOrig</name>
-        <rename>LinOrig</rename>
-        <type>None</type>
-        <length>50</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1009,7 +764,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>Pais</name>
+        <name>GrupoGeografico</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1026,7 +781,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
+      <xloc>176</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1083,8 +838,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>nrnf</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1093,7 +848,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1106,8 +861,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>datavenda</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1116,7 +871,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1129,8 +884,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>codcliente</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1139,7 +894,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1152,8 +907,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>nomecliente</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1162,7 +917,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1175,8 +930,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>emailcliente</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1185,7 +940,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1198,8 +953,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>regiaovendas</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1208,7 +963,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1221,8 +976,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>pais</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1231,7 +986,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1244,8 +999,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>grupogeografico</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1254,7 +1009,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1267,8 +1022,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>vendedorlogin</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1277,7 +1032,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1290,8 +1045,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>vendedornome</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1300,7 +1055,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1313,8 +1068,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>vendedorchefenome</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1323,7 +1078,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1336,8 +1091,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>cod_produto</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1346,7 +1101,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1359,8 +1114,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>produto</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1369,7 +1124,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1382,8 +1137,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>tamanho</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1392,7 +1147,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1405,8 +1160,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>linha</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1415,7 +1170,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1428,8 +1183,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>cor</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1438,7 +1193,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1451,8 +1206,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>subtotal</comments>
         <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1461,7 +1216,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1474,8 +1229,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>imptotal</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1484,7 +1239,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1497,8 +1252,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>frete</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1507,7 +1262,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1520,8 +1275,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>precounitario</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1530,7 +1285,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1543,8 +1298,8 @@ FROM TbImp_Vendas
         <origin>Table input</origin>
         <comments>qtd</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1553,7 +1308,7 @@ FROM TbImp_Vendas
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>pt_BR</date_format_locale>
+        <date_format_locale>en_GB</date_format_locale>
         <date_format_timezone>America/Sao_Paulo</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -1585,7 +1340,7 @@ FROM TbImp_Vendas
     </partitioning>
     <connection>DS</connection>
     <schema/>
-    <table>D_Pais</table>
+    <table>D_GrupoGeografico</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -1602,12 +1357,8 @@ FROM TbImp_Vendas
     <return_field/>
     <fields>
       <field>
-        <column_name>Sigla</column_name>
-        <stream_name>Sigla</stream_name>
-      </field>
-      <field>
-        <column_name>Id_GrupoGeo</column_name>
-        <stream_name>Id_GrupoGeo</stream_name>
+        <column_name>Nome</column_name>
+        <stream_name>GrupoGeografico</stream_name>
       </field>
       <field>
         <column_name>LinData</column_name>
@@ -1627,7 +1378,7 @@ FROM TbImp_Vendas
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
+      <xloc>432</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1649,7 +1400,7 @@ FROM TbImp_Vendas
     <error_description/>
     <fields>
       <field>
-        <name>Pais</name>
+        <name>GrupoGeografico</name>
         <case_insensitive>N</case_insensitive>
       </field>
     </fields>
@@ -1662,7 +1413,7 @@ FROM TbImp_Vendas
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>288</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
