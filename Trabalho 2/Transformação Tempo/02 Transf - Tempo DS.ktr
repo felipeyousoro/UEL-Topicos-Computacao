@@ -868,16 +868,16 @@
     <update_bypassed>Y</update_bypassed>
     <lookup>
       <schema>public</schema>
-      <table>d_data</table>
+      <table>d_calendario</table>
       <key>
-        <name>COD_TEMPO</name>
-        <field>COD_TEMPO</field>
+        <name>COD</name>
+        <field>COD</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>FDATA</name>
-        <field>FDATA</field>
+        <name>_DATA</name>
+        <field>_DATA</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -930,13 +930,13 @@
         <name2/>
       </key>
       <value>
-        <name>COD_TEMPO</name>
-        <rename>COD_TEMPO</rename>
+        <name>COD</name>
+        <rename>COD</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>FDATA</name>
-        <rename>FDATA</rename>
+        <name>_DATA</name>
+        <rename>_DATA</rename>
         <update>Y</update>
       </value>
       <value>
@@ -1227,7 +1227,7 @@
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>Cod_Tempo</name>
-        <rename>COD_TEMPO</rename>
+        <rename>COD</rename>
         <type>String</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1244,7 +1244,7 @@
       </meta>
       <meta>
         <name>Data</name>
-        <rename>FDATA</rename>
+        <rename>_DATA</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
