@@ -865,118 +865,118 @@
     </partitioning>
     <connection>ds</connection>
     <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
+    <update_bypassed>N</update_bypassed>
     <lookup>
       <schema>public</schema>
-      <table>d_calendario</table>
+      <table>d_data</table>
       <key>
-        <name>COD</name>
-        <field>COD</field>
+        <name>Cod_Tempo</name>
+        <field>Cod_Tempo</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>_DATA</name>
-        <field>_DATA</field>
+        <name>Data</name>
+        <field>_data</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NUMERO_DIA_SEMANA</name>
-        <field>NUMERO_DIA_SEMANA</field>
+        <name>Numero_Dia_Semana</name>
+        <field>Numero_Dia_Semana</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NUMERO_MES</name>
-        <field>NUMERO_MES</field>
+        <name>Numero_Mes</name>
+        <field>Numero_Mes</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NUMERO_ANO</name>
-        <field>NUMERO_ANO</field>
+        <name>Numero_Ano</name>
+        <field>Numero_Ano</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NUMERO_TRIMESTRE</name>
-        <field>NUMERO_TRIMESTRE</field>
+        <name>Numero_Trimestre</name>
+        <field>Numero_Trimestre</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NUMERO_SEMESTRE</name>
-        <field>NUMERO_SEMESTRE</field>
+        <name>Numero_Semestre</name>
+        <field>Numero_Semestre</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NOME_TRIMESTRE</name>
-        <field>NOME_TRIMESTRE</field>
+        <name>Nome_Trimestre</name>
+        <field>Nome_Trimestre</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NOME_SEMESTRE</name>
-        <field>NOME_SEMESTRE</field>
+        <name>Nome_Semestre</name>
+        <field>Nome_Semestre</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
-        <name>NOME_MES</name>
-        <field>NOME_MES</field>
+        <name>Nome_Mes</name>
+        <field>Nome_Mes</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>COD</name>
-        <rename>COD</rename>
+        <name>Cod_Tempo</name>
+        <rename>Cod_Tempo</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>_DATA</name>
-        <rename>_DATA</rename>
+        <name>_data</name>
+        <rename>Data</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NUMERO_DIA_SEMANA</name>
-        <rename>NUMERO_DIA_SEMANA</rename>
+        <name>Numero_Dia_Semana</name>
+        <rename>Numero_Dia_Semana</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NUMERO_MES</name>
-        <rename>NUMERO_MES</rename>
+        <name>Numero_Mes</name>
+        <rename>Numero_Mes</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NUMERO_ANO</name>
-        <rename>NUMERO_ANO</rename>
+        <name>Numero_Ano</name>
+        <rename>Numero_Ano</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NUMERO_TRIMESTRE</name>
-        <rename>NUMERO_TRIMESTRE</rename>
+        <name>Numero_Trimestre</name>
+        <rename>Numero_Trimestre</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NUMERO_SEMESTRE</name>
-        <rename>NUMERO_SEMESTRE</rename>
+        <name>Numero_Semestre</name>
+        <rename>Numero_Semestre</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NOME_TRIMESTRE</name>
-        <rename>NOME_TRIMESTRE</rename>
+        <name>Nome_Trimestre</name>
+        <rename>Nome_Trimestre</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NOME_SEMESTRE</name>
-        <rename>NOME_SEMESTRE</rename>
+        <name>Nome_Semestre</name>
+        <rename>Nome_Semestre</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>NOME_MES</name>
-        <rename>NOME_MES</rename>
+        <name>Nome_Mes</name>
+        <rename>Nome_Mes</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -1227,7 +1227,7 @@
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>Cod_Tempo</name>
-        <rename>COD</rename>
+        <rename>Cod_Tempo</rename>
         <type>String</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1244,7 +1244,7 @@
       </meta>
       <meta>
         <name>Data</name>
-        <rename>_DATA</rename>
+        <rename>Data</rename>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -1261,7 +1261,7 @@
       </meta>
       <meta>
         <name>Numero_Dia_Semana</name>
-        <rename>NUMERO_DIA_SEMANA</rename>
+        <rename>Numero_Dia_Semana</rename>
         <type>Integer</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1278,7 +1278,7 @@
       </meta>
       <meta>
         <name>Numero_Mes</name>
-        <rename>NUMERO_MES</rename>
+        <rename>Numero_Mes</rename>
         <type>Integer</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1295,7 +1295,7 @@
       </meta>
       <meta>
         <name>Numero_Ano</name>
-        <rename>NUMERO_ANO</rename>
+        <rename>Numero_Ano</rename>
         <type>Integer</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1312,7 +1312,7 @@
       </meta>
       <meta>
         <name>Numero_Trimestre</name>
-        <rename>NUMERO_TRIMESTRE</rename>
+        <rename>Numero_Trimestre</rename>
         <type>Integer</type>
         <length>50</length>
         <precision>-2</precision>
@@ -1329,7 +1329,7 @@
       </meta>
       <meta>
         <name>Numero_Semestre</name>
-        <rename>NUMERO_SEMESTRE</rename>
+        <rename>Numero_Semestre</rename>
         <type>Integer</type>
         <length>1</length>
         <precision>-2</precision>
@@ -1346,7 +1346,7 @@
       </meta>
       <meta>
         <name>Nome_Trimestre</name>
-        <rename>NOME_TRIMESTRE</rename>
+        <rename>Nome_Trimestre</rename>
         <type>String</type>
         <length>18</length>
         <precision>-2</precision>
@@ -1363,7 +1363,7 @@
       </meta>
       <meta>
         <name>Nome_Semestre</name>
-        <rename>NOME_SEMESTRE</rename>
+        <rename>Nome_Semestre</rename>
         <type>String</type>
         <length>17</length>
         <precision>-2</precision>
@@ -1380,7 +1380,7 @@
       </meta>
       <meta>
         <name>Nome_Mes</name>
-        <rename>NOME_MES</rename>
+        <rename>Nome_Mes</rename>
         <type>String</type>
         <length>250</length>
         <precision>-2</precision>

@@ -618,7 +618,7 @@
       <meta>
         <name>TIPREG</name>
         <rename>TIPREG</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>2</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -635,7 +635,7 @@
       <meta>
         <name>DATPREG</name>
         <rename>DATPREG</rename>
-        <type>None</type>
+        <type>Date</type>
         <length>8</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -652,10 +652,10 @@
       <meta>
         <name>CODBDI</name>
         <rename>CODBDI</rename>
-        <type>None</type>
-        <length>2</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>#</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -669,8 +669,8 @@
       <meta>
         <name>CODNEG</name>
         <rename>CODNEG</rename>
-        <type>None</type>
-        <length>12</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -686,7 +686,7 @@
       <meta>
         <name>TPMERC</name>
         <rename>TPMERC</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>3</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -703,8 +703,8 @@
       <meta>
         <name>NOMRES</name>
         <rename>NOMRES</rename>
-        <type>None</type>
-        <length>12</length>
+        <type>String</type>
+        <length>100</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -720,8 +720,8 @@
       <meta>
         <name>ESPECI</name>
         <rename>ESPECI</rename>
-        <type>None</type>
-        <length>10</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -737,8 +737,8 @@
       <meta>
         <name>PRAZOT</name>
         <rename>PRAZOT</rename>
-        <type>None</type>
-        <length>3</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -754,8 +754,8 @@
       <meta>
         <name>MODREF</name>
         <rename>MODREF</rename>
-        <type>None</type>
-        <length>4</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -771,7 +771,7 @@
       <meta>
         <name>PREABE</name>
         <rename>PREABE</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -788,7 +788,7 @@
       <meta>
         <name>PREMAX</name>
         <rename>PREMAX</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -805,7 +805,7 @@
       <meta>
         <name>PREMIN</name>
         <rename>PREMIN</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -822,7 +822,7 @@
       <meta>
         <name>PREMED</name>
         <rename>PREMED</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -839,7 +839,7 @@
       <meta>
         <name>PREULT</name>
         <rename>PREULT</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -856,7 +856,7 @@
       <meta>
         <name>PREOFC</name>
         <rename>PREOFC</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -873,7 +873,7 @@
       <meta>
         <name>PREOFV</name>
         <rename>PREOFV</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -890,7 +890,7 @@
       <meta>
         <name>TOTNEG</name>
         <rename>TOTNEG</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>5</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -907,7 +907,7 @@
       <meta>
         <name>QUATOT</name>
         <rename>QUATOT</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>18</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -924,7 +924,7 @@
       <meta>
         <name>VOLTOT</name>
         <rename>VOLTOT</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>16</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -941,7 +941,7 @@
       <meta>
         <name>PREEXE</name>
         <rename>PREEXE</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>11</length>
         <precision>99</precision>
         <conversion_mask/>
@@ -958,7 +958,7 @@
       <meta>
         <name>INDOPC</name>
         <rename>INDOPC</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>1</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -975,7 +975,7 @@
       <meta>
         <name>DATVEN</name>
         <rename>DATVEN</rename>
-        <type>None</type>
+        <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -992,7 +992,7 @@
       <meta>
         <name>FATCOT</name>
         <rename>FATCOT</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>7</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -1009,7 +1009,7 @@
       <meta>
         <name>PTOEXE</name>
         <rename>PTOEXE</rename>
-        <type>None</type>
+        <type>Number</type>
         <length>7</length>
         <precision>6</precision>
         <conversion_mask/>
@@ -1026,8 +1026,8 @@
       <meta>
         <name>CODISI</name>
         <rename>CODISI</rename>
-        <type>None</type>
-        <length>12</length>
+        <type>String</type>
+        <length>30</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -1043,7 +1043,7 @@
       <meta>
         <name>DISMES</name>
         <rename>DISMES</rename>
-        <type>None</type>
+        <type>Integer</type>
         <length>3</length>
         <precision>0</precision>
         <conversion_mask/>
@@ -1067,8 +1067,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>176</yloc>
+      <xloc>192</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1087,7 +1087,7 @@
     <schema/>
     <table>COT_HISTORICA</table>
     <commit>1000</commit>
-    <truncate>Y</truncate>
+    <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
     <specify_fields>Y</specify_fields>
