@@ -430,7 +430,7 @@
     <created_date>2023/11/06 21:36:54.584</created_date>
     <modified_user>-</modified_user>
     <modified_date>2023/11/06 21:36:54.584</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -488,13 +488,23 @@
   </connection>
   <order>
     <hop>
-      <from>Select values</from>
-      <to>Database lookup</to>
+      <from>Table input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Table input</from>
-      <to>Select values</to>
+      <from>Select values</from>
+      <to>Strings cut</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Strings cut</from>
+      <to>Select values 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 4</from>
+      <to>Database lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -502,7 +512,60 @@
       <to>Database lookup 2</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Database lookup 2</from>
+      <to>Database lookup 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
+  <step>
+    <name>Database lookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ds</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>D_CALENDARIO</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>DATPREG</name>
+        <field>_data</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ID_DATPREG</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Select values</name>
     <type>SelectValues</type>
@@ -517,86 +580,112 @@
     <fields>
       <field>
         <name>tipreg</name>
+        <rename/>
       </field>
       <field>
         <name>datpreg</name>
+        <rename/>
       </field>
       <field>
         <name>codbdi</name>
+        <rename/>
       </field>
       <field>
         <name>codneg</name>
+        <rename/>
       </field>
       <field>
         <name>tpmerc</name>
+        <rename/>
       </field>
       <field>
         <name>nomres</name>
+        <rename/>
       </field>
       <field>
         <name>especi</name>
+        <rename/>
       </field>
       <field>
         <name>prazot</name>
+        <rename/>
       </field>
       <field>
         <name>modref</name>
+        <rename/>
       </field>
       <field>
         <name>preabe</name>
+        <rename/>
       </field>
       <field>
         <name>premax</name>
+        <rename/>
       </field>
       <field>
         <name>premin</name>
+        <rename/>
       </field>
       <field>
         <name>premed</name>
+        <rename/>
       </field>
       <field>
         <name>preult</name>
+        <rename/>
       </field>
       <field>
         <name>preofc</name>
+        <rename/>
       </field>
       <field>
         <name>preofv</name>
+        <rename/>
       </field>
       <field>
         <name>totneg</name>
+        <rename/>
       </field>
       <field>
         <name>quatot</name>
+        <rename/>
       </field>
       <field>
         <name>voltot</name>
+        <rename/>
       </field>
       <field>
         <name>preexe</name>
+        <rename/>
       </field>
       <field>
         <name>indopc</name>
+        <rename/>
       </field>
       <field>
         <name>datven</name>
+        <rename/>
       </field>
       <field>
         <name>fatcot</name>
+        <rename/>
       </field>
       <field>
         <name>ptoexe</name>
+        <rename/>
       </field>
       <field>
         <name>codisi</name>
+        <rename/>
       </field>
       <field>
         <name>dismes</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
         <name>tipreg</name>
-        <rename>TIPREG</rename>
+        <rename>tipreg</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -613,8 +702,8 @@
       </meta>
       <meta>
         <name>datpreg</name>
-        <rename>DATPREG</rename>
-        <type>String</type>
+        <rename>datpreg</rename>
+        <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>yyyy-MM-dd</conversion_mask>
@@ -630,8 +719,8 @@
       </meta>
       <meta>
         <name>codbdi</name>
-        <rename>CODBDI</rename>
-        <type>None</type>
+        <rename>codbdi</rename>
+        <type>String</type>
         <length>2</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -643,11 +732,11 @@
         <decimal_symbol/>
         <grouping_symbol/>
         <currency_symbol/>
-        <storage_type/>
+        <storage_type>normal</storage_type>
       </meta>
       <meta>
         <name>codneg</name>
-        <rename>CODNEG</rename>
+        <rename>codneg</rename>
         <type>None</type>
         <length>12</length>
         <precision>-2</precision>
@@ -664,7 +753,7 @@
       </meta>
       <meta>
         <name>tpmerc</name>
-        <rename>TPMERC</rename>
+        <rename>tpmerc</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -681,7 +770,7 @@
       </meta>
       <meta>
         <name>nomres</name>
-        <rename>NOMRES</rename>
+        <rename>nomres</rename>
         <type>None</type>
         <length>12</length>
         <precision>-2</precision>
@@ -698,9 +787,9 @@
       </meta>
       <meta>
         <name>especi</name>
-        <rename>ESPECI</rename>
+        <rename>especi</rename>
         <type>None</type>
-        <length>30</length>
+        <length>10</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -715,7 +804,7 @@
       </meta>
       <meta>
         <name>prazot</name>
-        <rename>PRAZOT</rename>
+        <rename>prazot</rename>
         <type>None</type>
         <length>3</length>
         <precision>-2</precision>
@@ -732,7 +821,7 @@
       </meta>
       <meta>
         <name>modref</name>
-        <rename>MODREF</rename>
+        <rename>modref</rename>
         <type>None</type>
         <length>4</length>
         <precision>-2</precision>
@@ -749,7 +838,7 @@
       </meta>
       <meta>
         <name>preabe</name>
-        <rename>PREABE</rename>
+        <rename>preabe</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -766,7 +855,7 @@
       </meta>
       <meta>
         <name>premax</name>
-        <rename>PREMAX</rename>
+        <rename>premax</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -783,7 +872,7 @@
       </meta>
       <meta>
         <name>premin</name>
-        <rename>PREMIN</rename>
+        <rename>premin</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -800,7 +889,7 @@
       </meta>
       <meta>
         <name>premed</name>
-        <rename>PREMED</rename>
+        <rename>premed</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -817,7 +906,7 @@
       </meta>
       <meta>
         <name>preult</name>
-        <rename>PREULT</rename>
+        <rename>preult</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -834,7 +923,7 @@
       </meta>
       <meta>
         <name>preofc</name>
-        <rename>PREOFC</rename>
+        <rename>preofc</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -851,7 +940,7 @@
       </meta>
       <meta>
         <name>preofv</name>
-        <rename>PREOFV</rename>
+        <rename>preofv</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -868,7 +957,7 @@
       </meta>
       <meta>
         <name>totneg</name>
-        <rename>TOTNEG</rename>
+        <rename>totneg</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -885,7 +974,7 @@
       </meta>
       <meta>
         <name>quatot</name>
-        <rename>QUATOT</rename>
+        <rename>quatot</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -902,7 +991,7 @@
       </meta>
       <meta>
         <name>voltot</name>
-        <rename>VOLTOT</rename>
+        <rename>voltot</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -919,7 +1008,7 @@
       </meta>
       <meta>
         <name>preexe</name>
-        <rename>PREEXE</rename>
+        <rename>preexe</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -936,7 +1025,7 @@
       </meta>
       <meta>
         <name>indopc</name>
-        <rename>INDOPC</rename>
+        <rename>indopc</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -953,8 +1042,8 @@
       </meta>
       <meta>
         <name>datven</name>
-        <rename>DATVEN</rename>
-        <type>String</type>
+        <rename>datven</rename>
+        <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>yyyy-MM-dd</conversion_mask>
@@ -970,7 +1059,7 @@
       </meta>
       <meta>
         <name>fatcot</name>
-        <rename>FATCOT</rename>
+        <rename>fatcot</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -987,7 +1076,7 @@
       </meta>
       <meta>
         <name>ptoexe</name>
-        <rename>PTOEXE</rename>
+        <rename>ptoexe</rename>
         <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
@@ -1004,7 +1093,7 @@
       </meta>
       <meta>
         <name>codisi</name>
-        <rename>CODISI</rename>
+        <rename>codisi</rename>
         <type>None</type>
         <length>12</length>
         <precision>-2</precision>
@@ -1021,7 +1110,7 @@
       </meta>
       <meta>
         <name>dismes</name>
-        <rename>DISMES</rename>
+        <rename>dismes</rename>
         <type>None</type>
         <length>15</length>
         <precision>0</precision>
@@ -1046,8 +1135,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>111</yloc>
+      <xloc>192</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1682,14 +1771,14 @@ FROM COT_HISTORICA
       </output>
     </remotesteps>
     <GUI>
-      <xloc>255</xloc>
-      <yloc>114</yloc>
+      <xloc>112</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1698,29 +1787,576 @@ FROM COT_HISTORICA
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>public</schema>
-      <table>d_calendario</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>DATPREG</name>
-        <field>_data</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id</name>
-        <rename>ID_DATPREG</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
+    <fields>
+      <field>
+        <name>tipreg</name>
+        <rename/>
+      </field>
+      <field>
+        <name>datpreg</name>
+        <rename/>
+      </field>
+      <field>
+        <name>codneg</name>
+        <rename/>
+      </field>
+      <field>
+        <name>tpmerc</name>
+        <rename/>
+      </field>
+      <field>
+        <name>nomres</name>
+        <rename/>
+      </field>
+      <field>
+        <name>especi</name>
+        <rename/>
+      </field>
+      <field>
+        <name>prazot</name>
+        <rename/>
+      </field>
+      <field>
+        <name>modref</name>
+        <rename/>
+      </field>
+      <field>
+        <name>preabe</name>
+        <rename/>
+      </field>
+      <field>
+        <name>premax</name>
+        <rename/>
+      </field>
+      <field>
+        <name>premin</name>
+        <rename/>
+      </field>
+      <field>
+        <name>premed</name>
+        <rename/>
+      </field>
+      <field>
+        <name>preult</name>
+        <rename/>
+      </field>
+      <field>
+        <name>preofc</name>
+        <rename/>
+      </field>
+      <field>
+        <name>preofv</name>
+        <rename/>
+      </field>
+      <field>
+        <name>totneg</name>
+        <rename/>
+      </field>
+      <field>
+        <name>quatot</name>
+        <rename/>
+      </field>
+      <field>
+        <name>voltot</name>
+        <rename/>
+      </field>
+      <field>
+        <name>preexe</name>
+        <rename/>
+      </field>
+      <field>
+        <name>indopc</name>
+        <rename/>
+      </field>
+      <field>
+        <name>datven</name>
+        <rename/>
+      </field>
+      <field>
+        <name>fatcot</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ptoexe</name>
+        <rename/>
+      </field>
+      <field>
+        <name>codisi</name>
+        <rename/>
+      </field>
+      <field>
+        <name>dismes</name>
+        <rename/>
+      </field>
+      <field>
+        <name>codbdi1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>fidc</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>tipreg</name>
+        <rename>tipreg</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>datpreg</name>
+        <rename>datpreg</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>codneg</name>
+        <rename>codneg</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>tpmerc</name>
+        <rename>tpmerc</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>nomres</name>
+        <rename>nomres</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>especi</name>
+        <rename>especi</rename>
+        <type>None</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>prazot</name>
+        <rename>prazot</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>modref</name>
+        <rename>modref</rename>
+        <type>None</type>
+        <length>4</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>preabe</name>
+        <rename>preabe</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>premax</name>
+        <rename>premax</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>premin</name>
+        <rename>premin</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>premed</name>
+        <rename>premed</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>preult</name>
+        <rename>preult</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>preofc</name>
+        <rename>preofc</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>preofv</name>
+        <rename>preofv</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>totneg</name>
+        <rename>totneg</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>quatot</name>
+        <rename>quatot</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>voltot</name>
+        <rename>voltot</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>preexe</name>
+        <rename>preexe</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>indopc</name>
+        <rename>indopc</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>datven</name>
+        <rename>datven</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>fatcot</name>
+        <rename>fatcot</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ptoexe</name>
+        <rename>ptoexe</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>codisi</name>
+        <rename>codisi</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>dismes</name>
+        <rename>dismes</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>codbdi1</name>
+        <rename>codbdi</rename>
+        <type>String</type>
+        <length>2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>fidc</name>
+        <rename>fidc</rename>
+        <type>String</type>
+        <length>9</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1730,8 +2366,47 @@ FROM COT_HISTORICA
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>95</yloc>
+      <xloc>320</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Strings cut</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>codbdi</in_stream_name>
+        <out_stream_name>codbdi1</out_stream_name>
+        <cut_from>0</cut_from>
+        <cut_to>2</cut_to>
+      </field>
+      <field>
+        <in_stream_name>especi</in_stream_name>
+        <out_stream_name>fidc</out_stream_name>
+        <cut_from>0</cut_from>
+        <cut_to>9</cut_to>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1746,18 +2421,18 @@ FROM COT_HISTORICA
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection/>
-    <cache>Y</cache>
-    <cache_load_all>Y</cache_load_all>
+    <connection>ds</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
       <schema>public</schema>
-      <table>d_bdi</table>
+      <table>D_BDI</table>
       <orderby/>
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>CODBDI</name>
+        <name>codbdi</name>
         <field>cod</field>
         <condition>=</condition>
         <name2/>
@@ -1778,8 +2453,56 @@ FROM COT_HISTORICA
       </output>
     </remotesteps>
     <GUI>
-      <xloc>583</xloc>
-      <yloc>140</yloc>
+      <xloc>480</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup 2 2</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ds</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>public</schema>
+      <table>D_ESPECIFICACAO</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>fidc</name>
+        <field>fidc</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>ID_ESPECIFICACAO</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

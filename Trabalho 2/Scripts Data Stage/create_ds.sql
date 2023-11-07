@@ -159,3 +159,10 @@ SELECT distinct FIDC FROM D_ESPECIFICACAO ORDER BY FIDC;
 
 SELECT * FROM d_especificacao, cot_historica WHERE d_especificacao.fidc = 'ON' AND d_especificacao.fidc = cot_historica.especi;
 SELECT * FROM D_BDI;
+SELECT DISTINCT CODBDI FROM COT_HISTORICA;
+DELETE FROM COT_HISTORICA WHERE CODBDI = '.2';
+
+--print the ord of char 3 in codbdi
+SELECT DISTINCT ASCII(SUBSTRING(CODBDI, 4, 1)) FROM COT_HISTORICA;
+SELECT DISTINCT ASCII(SUBSTRING(cod, 4, 1)) FROM D_BDI;
+

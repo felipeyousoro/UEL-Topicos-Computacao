@@ -512,83 +512,551 @@
     <fields>
       <field>
         <name>TIPREG</name>
+        <rename/>
       </field>
       <field>
         <name>DATPREG</name>
+        <rename/>
       </field>
       <field>
         <name>CODBDI</name>
+        <rename/>
       </field>
       <field>
         <name>CODNEG</name>
+        <rename/>
       </field>
       <field>
         <name>TPMERC</name>
+        <rename/>
       </field>
       <field>
         <name>NOMRES</name>
+        <rename/>
       </field>
       <field>
         <name>ESPECI</name>
+        <rename/>
       </field>
       <field>
         <name>PRAZOT</name>
+        <rename/>
       </field>
       <field>
         <name>MODREF</name>
+        <rename/>
       </field>
       <field>
         <name>PREABE</name>
+        <rename/>
       </field>
       <field>
         <name>PREMAX</name>
+        <rename/>
       </field>
       <field>
         <name>PREMIN</name>
+        <rename/>
       </field>
       <field>
         <name>PREMED</name>
+        <rename/>
       </field>
       <field>
         <name>PREULT</name>
+        <rename/>
       </field>
       <field>
         <name>PREOFC</name>
+        <rename/>
       </field>
       <field>
         <name>PREOFV</name>
+        <rename/>
       </field>
       <field>
         <name>TOTNEG</name>
+        <rename/>
       </field>
       <field>
         <name>QUATOT</name>
+        <rename/>
       </field>
       <field>
         <name>VOLTOT</name>
+        <rename/>
       </field>
       <field>
         <name>PREEXE</name>
+        <rename/>
       </field>
       <field>
         <name>INDOPC</name>
+        <rename/>
       </field>
       <field>
         <name>DATVEN</name>
+        <rename/>
       </field>
       <field>
         <name>FATCOT</name>
+        <rename/>
       </field>
       <field>
         <name>PTOEXE</name>
+        <rename/>
       </field>
       <field>
         <name>CODISI</name>
+        <rename/>
       </field>
       <field>
         <name>DISMES</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>TIPREG</name>
+        <rename>TIPREG</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>DATPREG</name>
+        <rename>DATPREG</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CODBDI</name>
+        <rename>CODBDI</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CODNEG</name>
+        <rename>CODNEG</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>TPMERC</name>
+        <rename>TPMERC</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>NOMRES</name>
+        <rename>NOMRES</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ESPECI</name>
+        <rename>ESPECI</rename>
+        <type>None</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PRAZOT</name>
+        <rename>PRAZOT</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>MODREF</name>
+        <rename>MODREF</rename>
+        <type>None</type>
+        <length>4</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREABE</name>
+        <rename>PREABE</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREMAX</name>
+        <rename>PREMAX</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREMIN</name>
+        <rename>PREMIN</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREMED</name>
+        <rename>PREMED</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREULT</name>
+        <rename>PREULT</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREOFC</name>
+        <rename>PREOFC</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREOFV</name>
+        <rename>PREOFV</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>TOTNEG</name>
+        <rename>TOTNEG</rename>
+        <type>None</type>
+        <length>5</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>QUATOT</name>
+        <rename>QUATOT</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>VOLTOT</name>
+        <rename>VOLTOT</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PREEXE</name>
+        <rename>PREEXE</rename>
+        <type>None</type>
+        <length>11</length>
+        <precision>99</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>INDOPC</name>
+        <rename>INDOPC</rename>
+        <type>None</type>
+        <length>1</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>DATVEN</name>
+        <rename>DATVEN</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>FATCOT</name>
+        <rename>FATCOT</rename>
+        <type>None</type>
+        <length>7</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>PTOEXE</name>
+        <rename>PTOEXE</rename>
+        <type>None</type>
+        <length>7</length>
+        <precision>6</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CODISI</name>
+        <rename>CODISI</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>DISMES</name>
+        <rename>DISMES</rename>
+        <type>None</type>
+        <length>3</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -600,7 +1068,7 @@
     </remotesteps>
     <GUI>
       <xloc>208</xloc>
-      <yloc>64</yloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -820,7 +1288,7 @@
       <field>
         <name>DATPREG</name>
         <type>Date</type>
-        <format>yyyyMMdd</format>
+        <format>dd/MM/yyyy</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
@@ -1120,7 +1588,7 @@
       <field>
         <name>DATVEN</name>
         <type>Date</type>
-        <format>yyyyMMdd</format>
+        <format>dd/MM/yyyy</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
