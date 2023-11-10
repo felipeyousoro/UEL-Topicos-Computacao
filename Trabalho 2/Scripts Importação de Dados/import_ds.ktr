@@ -512,107 +512,81 @@
     <fields>
       <field>
         <name>TIPREG</name>
-        <rename/>
       </field>
       <field>
         <name>DATPREG</name>
-        <rename/>
       </field>
       <field>
         <name>CODBDI</name>
-        <rename/>
       </field>
       <field>
         <name>CODNEG</name>
-        <rename/>
       </field>
       <field>
         <name>TPMERC</name>
-        <rename/>
       </field>
       <field>
         <name>NOMRES</name>
-        <rename/>
       </field>
       <field>
         <name>ESPECI</name>
-        <rename/>
       </field>
       <field>
         <name>PRAZOT</name>
-        <rename/>
       </field>
       <field>
         <name>MODREF</name>
-        <rename/>
       </field>
       <field>
         <name>PREABE</name>
-        <rename/>
       </field>
       <field>
         <name>PREMAX</name>
-        <rename/>
       </field>
       <field>
         <name>PREMIN</name>
-        <rename/>
       </field>
       <field>
         <name>PREMED</name>
-        <rename/>
       </field>
       <field>
         <name>PREULT</name>
-        <rename/>
       </field>
       <field>
         <name>PREOFC</name>
-        <rename/>
       </field>
       <field>
         <name>PREOFV</name>
-        <rename/>
       </field>
       <field>
         <name>TOTNEG</name>
-        <rename/>
       </field>
       <field>
         <name>QUATOT</name>
-        <rename/>
       </field>
       <field>
         <name>VOLTOT</name>
-        <rename/>
       </field>
       <field>
         <name>PREEXE</name>
-        <rename/>
       </field>
       <field>
         <name>INDOPC</name>
-        <rename/>
       </field>
       <field>
         <name>DATVEN</name>
-        <rename/>
       </field>
       <field>
         <name>FATCOT</name>
-        <rename/>
       </field>
       <field>
         <name>PTOEXE</name>
-        <rename/>
       </field>
       <field>
         <name>CODISI</name>
-        <rename/>
       </field>
       <field>
         <name>DISMES</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1215,7 +1189,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
+      <xloc>320</xloc>
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
