@@ -127,3 +127,5 @@ CREATE TABLE F_B3
 
 select *
 from f_b3;
+
+select * from cot_historica where DATPREG is null;
