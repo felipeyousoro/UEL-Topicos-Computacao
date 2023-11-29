@@ -437,7 +437,7 @@
   </notepads>
   <connection>
     <name>ds</name>
-    <server>localhost</server>
+    <server>database-1.ck6sbvxz8wfd.sa-east-1.rds.amazonaws.com</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>ds</database>
@@ -488,7 +488,7 @@
   </connection>
   <connection>
     <name>dw</name>
-    <server>localhost</server>
+    <server>database-1.ck6sbvxz8wfd.sa-east-1.rds.amazonaws.com</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
     <database>dw</database>
