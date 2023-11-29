@@ -1233,7 +1233,22 @@
     <length>Characters</length>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:\Users\Watanabe\Desktop\Repositórios\UEL-Topicos-Computacao\Trabalho 2\Datasets\2017.csv</name>
+      <name>C:\Users\Watanabe\Desktop\Repositórios\UEL-Topicos-Computacao\Trabalho 2\Datasets\cothist_2016.csv</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>C:\Users\Watanabe\Desktop\Repositórios\UEL-Topicos-Computacao\Trabalho 2\Datasets\cothist_2017.csv</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>C:\Users\Watanabe\Desktop\Repositórios\UEL-Topicos-Computacao\Trabalho 2\Datasets\cothist_2018.csv</name>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>C:\Users\Watanabe\Desktop\Repositórios\UEL-Topicos-Computacao\Trabalho 2\Datasets\cothist_2019.csv</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
